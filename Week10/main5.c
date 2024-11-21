@@ -4,23 +4,7 @@
 #define COLS 3
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
-void addMatrix(int A[ROWS][COLS],int B[ROWS][COLS],int C[ROWS][COLS]){
-	int i;
-	int j;
-	for (i=0; i<ROWS;i++)
-		for (j=0; j<COLS;j++)
-			C[i][j] = A[i][j]+ B[i][j];
-}
 
-void printMatrix(int C[ROWS][COLS]){
-	int i;
-	int j;
-	for (i=0; i<ROWS;i++){
-		for (j=0; j<COLS;j++)
-			printf("%4d",C[i][j]);
-		printf("\n");
-    }
-}
 
 	
 int main(void) {
@@ -41,4 +25,20 @@ int main(void) {
 	return 0;
 }
 
+void addMatrix(int A[ROWS][COLS],int B[ROWS][COLS],int C[ROWS][COLS]){
+	int i;
+	int j;
+	for (i=0; i<ROWS;i++)
+		for (j=0; j<COLS;j++)
+			C[i][j] = A[i][j]+ B[i][j];
+}
 
+void printMatrix(int C[ROWS][COLS]){
+	int i;
+	int j;
+	for (i=0; i<ROWS;i++){
+		for (j=0; j<COLS;j++)
+			printf("%4d",C[i][j]);
+		printf("\n");
+    }
+}
