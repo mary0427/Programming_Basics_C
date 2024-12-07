@@ -85,14 +85,22 @@ int board_initBoard(void)
 
 // ----- EX. 5 : shark ------------
 int board_stepShark(void)
-{
+{ 	
+	int i;
+	shark_position += (rand()%MAX_SHARKSTEP) + 1; //1~MAX_SHARKSTEP(6)칸을 랜덤이동
+	
+	for(i=0; i<=shark_position; i++)
+	{
+		board_status[i] = BOARDSTATUS_NOK; //이동하며 파손시킴 
+	}
 
+	return shark_position;
 }
 // ----- EX. 5 : shark ------------
 
 
 // ----- EX. 3 : board ------------
-int board_getBoardStatus(int pos)
+int board_getBoardStatus(int pos) //파손여부 
 {
     return board_status[pos];
 }
