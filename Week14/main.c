@@ -283,7 +283,7 @@ int main(int argc, const char * argv[]) {
 //shark moving (2번째 turn=0부터) 
 		printf("\n");   	
     	if (turn ==0) 
-        {
+        {	 
         	int shark_pos = board_stepShark();
         	printf("Shark moved to pos %i!\n",shark_pos);
         	//check die
@@ -291,7 +291,7 @@ int main(int argc, const char * argv[]) {
 		}
     	
 // ----- EX. 6 : game end ------------
-    } while(game_end() == 0); //flag_end가 0 = 하나라도 살아있음 의미 
+    } while(game_end() == 0); // 하나라도 살아있으면 TRUE 
     
     //step 3. game end process
     printf("\n");
